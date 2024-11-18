@@ -1,0 +1,6 @@
+google-cloud-storage
+psycopg2-binary
+python-dotenv
+requests
+pgdumplib
+dump

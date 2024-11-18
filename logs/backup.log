@@ -1,0 +1,377 @@
+2024-11-18 04:15:35 - INFO - Starting perform_backup
+2024-11-18 04:15:35 - INFO - Database Action: backup_start
+2024-11-18 04:15:37 - CRITICAL - Backup operation failed: Backup failed: pg_dump: error: server version: 15.6; pg_dump version: 14.14 (Homebrew)
+pg_dump: error: aborting because of server version mismatch
+
+2024-11-18 04:15:37 - CRITICAL - Stack trace: Traceback (most recent call last):
+  File "/Users/tasha/Dev/backup_utility/backup/postgres_backup.py", line 49, in pg_backup
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['pg_dump', 'postgresql://postgres.okqtrvfigukzuwvopjco:9J3yQmn1Tw0bPzz2@aws-0-eu-central-1.pooler.supabase.com:6543/postgres', '--format=custom', '--file=/Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118041536.dump', '--verbose', '--no-owner', '--no-privileges']' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tasha/Dev/backup_utility/backup/backup_manager.py", line 39, in perform_backup
+    backup_file = backup_func(self.config['local_storage_dir'], compress)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tasha/Dev/backup_utility/backup/postgres_backup.py", line 63, in pg_backup
+    raise Exception(f"Backup failed: {e.stderr}")
+Exception: Backup failed: pg_dump: error: server version: 15.6; pg_dump version: 14.14 (Homebrew)
+pg_dump: error: aborting because of server version mismatch
+
+
+2024-11-18 04:15:37 - INFO - Completed perform_backup successfully
+2024-11-18 04:18:59 - INFO - Starting perform_backup
+2024-11-18 04:18:59 - INFO - Database Action: backup_start
+2024-11-18 04:19:01 - CRITICAL - Backup operation failed: Backup failed: pg_dump: error: server version: 15.6; pg_dump version: 14.14 (Homebrew)
+pg_dump: error: aborting because of server version mismatch
+
+2024-11-18 04:19:01 - CRITICAL - Stack trace: Traceback (most recent call last):
+  File "/Users/tasha/Dev/backup_utility/backup/postgres_backup.py", line 49, in pg_backup
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['pg_dump', 'postgresql://postgres.okqtrvfigukzuwvopjco:9J3yQmn1Tw0bPzz2@aws-0-eu-central-1.pooler.supabase.com:6543/postgres', '--format=custom', '--file=/Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118041859.dump', '--verbose', '--no-owner', '--no-privileges']' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tasha/Dev/backup_utility/backup/backup_manager.py", line 39, in perform_backup
+    backup_file = backup_func(self.config['local_storage_dir'], compress)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tasha/Dev/backup_utility/backup/postgres_backup.py", line 63, in pg_backup
+    raise Exception(f"Backup failed: {e.stderr}")
+Exception: Backup failed: pg_dump: error: server version: 15.6; pg_dump version: 14.14 (Homebrew)
+pg_dump: error: aborting because of server version mismatch
+
+
+2024-11-18 04:19:01 - INFO - Completed perform_backup successfully
+2024-11-18 04:20:26 - INFO - Starting perform_backup
+2024-11-18 04:20:26 - INFO - Database Action: backup_start
+2024-11-18 04:20:26 - CRITICAL - Backup operation failed: [Errno 2] No such file or directory: 'pg_dump'
+2024-11-18 04:20:26 - CRITICAL - Stack trace: Traceback (most recent call last):
+  File "/Users/tasha/Dev/backup_utility/backup/backup_manager.py", line 39, in perform_backup
+    backup_file = backup_func(self.config['local_storage_dir'], compress)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tasha/Dev/backup_utility/backup/postgres_backup.py", line 49, in pg_backup
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 1950, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pg_dump'
+
+2024-11-18 04:20:26 - INFO - Completed perform_backup successfully
+2024-11-18 04:24:32 - INFO - Starting perform_backup
+2024-11-18 04:24:32 - INFO - Database Action: backup_start
+2024-11-18 04:24:59 - INFO - local storage save succeeded for None
+2024-11-18 04:24:59 - INFO - Completed perform_backup successfully
+2024-11-18 04:42:13 - INFO - Starting perform_backup
+2024-11-18 04:42:13 - INFO - Database Action: backup_start
+2024-11-18 04:42:46 - INFO - local storage save succeeded for /Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118044214.dump
+2024-11-18 04:42:46 - INFO - Completed perform_backup successfully
+2024-11-18 04:44:01 - INFO - Database Action: restore_start
+2024-11-18 04:44:09 - INFO - Database Action: restore_complete
+2024-11-18 04:44:26 - INFO - Starting perform_backup
+2024-11-18 04:44:26 - INFO - Database Action: backup_start
+2024-11-18 04:44:52 - INFO - cloud storage upload succeeded for backups/20241118_044452_supabase_backup_postgres_20241118044427.dump
+2024-11-18 04:44:52 - INFO - Completed perform_backup successfully
+2024-11-18 04:45:33 - INFO - Database Action: restore_start
+2024-11-18 04:45:33 - CRITICAL - Restore operation failed: 'DatabaseLogger' object has no attribute 'info'
+2024-11-18 04:45:33 - CRITICAL - Stack trace: Traceback (most recent call last):
+  File "/Users/tasha/Dev/backup_utility/restore/restore.py", line 132, in restore_backup
+    logger.info(f"Created temporary directory: {temp_dir}")
+    ^^^^^^^^^^^
+AttributeError: 'DatabaseLogger' object has no attribute 'info'
+
+2024-11-18 04:51:47 - CRITICAL - Restore operation failed: 'DatabaseLogger' object has no attribute 'info'
+2024-11-18 04:51:47 - CRITICAL - Stack trace: Traceback (most recent call last):
+  File "/Users/tasha/Dev/backup_utility/restore/restore.py", line 114, in restore_backup
+    logger.log_database_action(
+  File "/Users/tasha/Dev/backup_utility/logger.py", line 60, in log_database_action
+    self.info(f"Database Action: {action}")
+    ^^^^^^^^^
+AttributeError: 'DatabaseLogger' object has no attribute 'info'
+
+2024-11-18 04:52:22 - INFO - Database Action: restore_start
+2024-11-18 04:52:22 - INFO - Created temporary directory: /var/folders/pt/r4_g9px90ll3s7fj638r8sy80000gn/T/tmpt7ymmnci
+2024-11-18 04:52:22 - INFO - cloud storage download succeeded for /var/folders/pt/r4_g9px90ll3s7fj638r8sy80000gn/T/tmpt7ymmnci/20241118_044452_supabase_backup_postgres_20241118044427.dump
+2024-11-18 04:52:31 - INFO - Database Action: restore_complete
+2024-11-18 04:52:31 - INFO - Cleaning up temporary directory: /var/folders/pt/r4_g9px90ll3s7fj638r8sy80000gn/T/tmpt7ymmnci
+2024-11-18 05:37:10 - INFO - Starting perform_backup
+2024-11-18 05:37:10 - INFO - Database Action: backup_start
+2024-11-18 05:37:35 - INFO - local storage save succeeded for /Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118053711.dump
+2024-11-18 05:37:35 - CRITICAL - Backup operation failed: 'BackupManager' object has no attribute '_notify'
+2024-11-18 05:37:35 - CRITICAL - Stack trace: Traceback (most recent call last):
+  File "/Users/tasha/Dev/backup_utility/backup/backup_manager.py", line 74, in perform_backup
+    self._notify(
+    ^^^^^^^^^^^^
+AttributeError: 'BackupManager' object has no attribute '_notify'
+
+2024-11-18 05:37:35 - ERROR - Failed perform_backup: 'BackupManager' object has no attribute '_notify'
+2024-11-18 05:37:35 - ERROR - Stack trace: Traceback (most recent call last):
+  File "/Users/tasha/Dev/backup_utility/backup/backup_manager.py", line 74, in perform_backup
+    self._notify(
+    ^^^^^^^^^^^^
+AttributeError: 'BackupManager' object has no attribute '_notify'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tasha/Dev/backup_utility/logger.py", line 50, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tasha/Dev/backup_utility/backup/backup_manager.py", line 84, in perform_backup
+    self._notify("backup", False, f"Database: {db_type}", str(e))
+    ^^^^^^^^^^^^
+AttributeError: 'BackupManager' object has no attribute '_notify'
+
+2024-11-18 05:39:20 - INFO - Starting perform_backup
+2024-11-18 05:39:20 - INFO - Database Action: backup_start
+2024-11-18 05:39:48 - INFO - local storage save succeeded for /Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118053921.dump
+2024-11-18 05:39:48 - INFO - Completed perform_backup successfully
+2024-11-18 05:52:22 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 05:52:22 - INFO - Testing Slack webhook connection
+2024-11-18 05:52:22 - INFO - Slack API response status code: 200
+2024-11-18 05:52:22 - INFO - Successfully sent Slack notification
+2024-11-18 06:00:15 - INFO - Starting BackupManager notification test
+2024-11-18 06:00:15 - INFO - Checking configuration...
+2024-11-18 06:00:17 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 06:00:17 - INFO - Testing notification directly...
+2024-11-18 06:00:18 - INFO - Slack API response status code: 200
+2024-11-18 06:00:18 - INFO - Successfully sent Slack notification
+2024-11-18 06:00:18 - INFO - Testing backup with notification...
+2024-11-18 06:00:18 - INFO - Starting perform_backup
+2024-11-18 06:00:18 - INFO - Database Action: backup_start
+2024-11-18 06:00:46 - INFO - local storage save succeeded for /Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118060019.dump
+2024-11-18 06:00:46 - INFO - cloud storage upload succeeded for None
+2024-11-18 06:00:47 - INFO - Slack API response status code: 200
+2024-11-18 06:00:47 - INFO - Successfully sent Slack notification
+2024-11-18 06:00:47 - INFO - Completed perform_backup successfully
+2024-11-18 06:17:32 - INFO - Starting perform_backup
+2024-11-18 06:17:32 - INFO - Database Action: backup_start
+2024-11-18 06:17:54 - INFO - local storage save succeeded for /Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118061733.dump
+2024-11-18 06:17:54 - INFO - Completed perform_backup successfully
+2024-11-18 06:19:18 - INFO - Starting perform_backup
+2024-11-18 06:19:18 - INFO - Database Action: backup_start
+2024-11-18 06:19:47 - INFO - local storage save succeeded for /Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118061919.dump
+2024-11-18 06:19:47 - INFO - Completed perform_backup successfully
+2024-11-18 06:30:54 - INFO - Starting perform_backup
+2024-11-18 06:30:54 - INFO - Database Action: backup_start
+2024-11-18 06:31:27 - INFO - local storage save succeeded for /Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118063057.dump
+2024-11-18 06:31:27 - INFO - Completed perform_backup successfully
+2024-11-18 07:10:28 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 07:10:28 - INFO - Testing Slack webhook connection
+2024-11-18 07:10:28 - INFO - Slack API response status code: 200
+2024-11-18 07:10:28 - INFO - Successfully sent Slack notification
+2024-11-18 07:20:18 - INFO - Starting perform_backup
+2024-11-18 07:20:18 - INFO - Database Action: backup_start
+2024-11-18 07:20:38 - INFO - local storage save succeeded for /Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118072019.dump
+2024-11-18 07:20:38 - INFO - Completed perform_backup successfully
+2024-11-18 14:14:02 - INFO - Starting BackupManager notification test
+2024-11-18 14:14:02 - INFO - Checking configuration...
+2024-11-18 14:14:03 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 14:14:03 - INFO - Slack notifier initialized successfully
+2024-11-18 14:14:03 - INFO - Testing notification directly...
+2024-11-18 14:14:03 - INFO - Slack API response status code: 200
+2024-11-18 14:14:03 - INFO - Successfully sent Slack notification
+2024-11-18 14:14:28 - INFO - Starting perform_backup
+2024-11-18 14:14:28 - INFO - Database Action: backup_start
+2024-11-18 14:14:28 - CRITICAL - Backup operation failed: Unable to connect to the PostgreSQL database
+2024-11-18 14:14:28 - CRITICAL - Stack trace: Traceback (most recent call last):
+  File "/Users/tasha/Dev/backup_utility/backup/backup_manager.py", line 79, in perform_backup
+    backup_file = backup_func(self.config['local_storage_dir'], compress)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tasha/Dev/backup_utility/backup/postgres_backup.py", line 11, in pg_backup
+    raise Exception("Unable to connect to the PostgreSQL database")
+Exception: Unable to connect to the PostgreSQL database
+
+2024-11-18 14:14:28 - INFO - Completed perform_backup successfully
+2024-11-18 14:31:50 - INFO - Starting perform_backup
+2024-11-18 14:31:50 - INFO - Database Action: backup_start
+2024-11-18 14:31:51 - CRITICAL - Backup operation failed: Unable to connect to the PostgreSQL database
+2024-11-18 14:31:51 - CRITICAL - Stack trace: Traceback (most recent call last):
+  File "/Users/tasha/Dev/backup_utility/backup/backup_manager.py", line 79, in perform_backup
+    backup_file = backup_func(self.config['local_storage_dir'], compress)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tasha/Dev/backup_utility/backup/postgres_backup.py", line 11, in pg_backup
+    raise Exception("Unable to connect to the PostgreSQL database")
+Exception: Unable to connect to the PostgreSQL database
+
+2024-11-18 14:31:51 - INFO - Completed perform_backup successfully
+2024-11-18 14:42:00 - INFO - Starting BackupManager notification test
+2024-11-18 14:42:00 - INFO - Checking configuration...
+2024-11-18 14:42:01 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 14:42:01 - INFO - Slack notifier initialized successfully
+2024-11-18 14:42:01 - INFO - Testing notification directly...
+2024-11-18 14:42:02 - INFO - Slack API response status code: 200
+2024-11-18 14:42:02 - INFO - Successfully sent Slack notification
+2024-11-18 14:42:47 - INFO - Starting perform_backup
+2024-11-18 14:42:47 - INFO - Database Action: backup_start
+2024-11-18 14:42:48 - CRITICAL - Backup operation failed: Unable to connect to the PostgreSQL database
+2024-11-18 14:42:48 - CRITICAL - Stack trace: Traceback (most recent call last):
+  File "/Users/tasha/Dev/backup_utility/backup/backup_manager.py", line 79, in perform_backup
+    backup_file = backup_func(self.config['local_storage_dir'], compress)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tasha/Dev/backup_utility/backup/postgres_backup.py", line 11, in pg_backup
+    raise Exception("Unable to connect to the PostgreSQL database")
+Exception: Unable to connect to the PostgreSQL database
+
+2024-11-18 14:42:48 - INFO - Completed perform_backup successfully
+2024-11-18 14:44:29 - INFO - Starting BackupManager notification test
+2024-11-18 14:44:29 - INFO - Checking configuration...
+2024-11-18 14:44:30 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 14:44:30 - INFO - Slack notifier initialized successfully
+2024-11-18 14:44:30 - INFO - Testing notification directly...
+2024-11-18 14:44:31 - INFO - Slack API response status code: 200
+2024-11-18 14:44:31 - INFO - Successfully sent Slack notification
+2024-11-18 14:44:47 - INFO - Starting perform_backup
+2024-11-18 14:44:47 - INFO - Database Action: backup_start
+2024-11-18 14:44:48 - CRITICAL - Backup operation failed: Unable to connect to the PostgreSQL database
+2024-11-18 14:44:48 - CRITICAL - Stack trace: Traceback (most recent call last):
+  File "/Users/tasha/Dev/backup_utility/backup/backup_manager.py", line 79, in perform_backup
+    backup_file = backup_func(self.config['local_storage_dir'], compress)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tasha/Dev/backup_utility/backup/postgres_backup.py", line 11, in pg_backup
+    raise Exception("Unable to connect to the PostgreSQL database")
+Exception: Unable to connect to the PostgreSQL database
+
+2024-11-18 14:44:48 - INFO - Completed perform_backup successfully
+2024-11-18 16:13:31 - INFO - Starting perform_backup
+2024-11-18 16:13:31 - INFO - Database Action: backup_start
+2024-11-18 16:13:32 - CRITICAL - Backup operation failed: Unable to connect to the PostgreSQL database
+2024-11-18 16:13:32 - CRITICAL - Stack trace: Traceback (most recent call last):
+  File "/Users/tasha/Dev/backup_utility/backup/backup_manager.py", line 79, in perform_backup
+    backup_file = backup_func(self.config['local_storage_dir'], compress)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tasha/Dev/backup_utility/backup/postgres_backup.py", line 11, in pg_backup
+    raise Exception("Unable to connect to the PostgreSQL database")
+Exception: Unable to connect to the PostgreSQL database
+
+2024-11-18 16:13:32 - INFO - Completed perform_backup successfully
+2024-11-18 16:45:23 - INFO - Starting perform_backup
+2024-11-18 16:45:23 - INFO - Database Action: backup_start
+2024-11-18 16:45:24 - CRITICAL - Backup operation failed: [Errno 2] No such file or directory: 'pg_dump'
+2024-11-18 16:45:24 - CRITICAL - Stack trace: Traceback (most recent call last):
+  File "/Users/tasha/Dev/backup_utility/backup/backup_manager.py", line 79, in perform_backup
+    backup_file = backup_func(self.config['local_storage_dir'], compress)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tasha/Dev/backup_utility/backup/postgres_backup.py", line 54, in pg_backup
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 1950, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pg_dump'
+
+2024-11-18 16:45:24 - INFO - Completed perform_backup successfully
+2024-11-18 16:48:51 - INFO - Starting perform_backup
+2024-11-18 16:48:51 - INFO - Database Action: backup_start
+2024-11-18 16:49:12 - INFO - local storage save succeeded for /Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118164852.dump
+2024-11-18 16:49:12 - INFO - Completed perform_backup successfully
+2024-11-18 16:57:59 - INFO - Starting perform_backup
+2024-11-18 16:57:59 - INFO - Starting backup operation for postgres
+2024-11-18 16:58:23 - INFO - local storage save succeeded for /Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118165800.dump
+2024-11-18 16:58:23 - INFO - Completed perform_backup successfully
+2024-11-18 17:00:28 - INFO - Starting BackupManager notification test
+2024-11-18 17:00:28 - INFO - Checking configuration...
+2024-11-18 17:00:29 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 17:00:29 - INFO - Testing Slack webhook connection
+2024-11-18 17:00:30 - INFO - Slack API response status code: 200
+2024-11-18 17:00:30 - INFO - Successfully sent Slack notification
+2024-11-18 17:00:30 - INFO - Slack notifier initialized and tested successfully
+2024-11-18 17:00:30 - INFO - Testing notification directly...
+2024-11-18 17:00:30 - INFO - Sending notification for test
+2024-11-18 17:00:30 - INFO - Slack API response status code: 200
+2024-11-18 17:00:30 - INFO - Successfully sent Slack notification
+2024-11-18 17:13:36 - INFO - Starting perform_backup
+2024-11-18 17:13:36 - INFO - Database Action: backup_start
+2024-11-18 17:13:58 - INFO - local storage save succeeded for /Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118171337.dump
+2024-11-18 17:13:58 - INFO - Completed perform_backup successfully
+2024-11-18 17:19:41 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 17:19:41 - INFO - Slack notifier initialized successfully
+2024-11-18 17:19:41 - INFO - Starting perform_backup
+2024-11-18 17:19:41 - INFO - Database Action: backup_start
+2024-11-18 17:20:04 - INFO - local storage save succeeded for /Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118171941.dump
+2024-11-18 17:20:04 - INFO - Slack API response status code: 200
+2024-11-18 17:20:04 - INFO - Successfully sent Slack notification
+2024-11-18 17:20:04 - INFO - Completed perform_backup successfully
+2024-11-18 17:22:15 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 17:22:15 - INFO - Slack notifier initialized successfully
+2024-11-18 17:24:15 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 17:24:15 - INFO - Slack notifier initialized successfully
+2024-11-18 17:26:10 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 17:26:10 - INFO - Slack notifier initialized successfully
+2024-11-18 17:26:10 - INFO - Attempting to delete backup: output/supabase_backup_postgres_20241118171941.dump from local storage
+2024-11-18 17:26:10 - INFO - Local delete result: False
+2024-11-18 17:42:58 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 17:42:58 - INFO - Slack notifier initialized successfully
+2024-11-18 17:42:58 - INFO - Attempting to delete backup: supabase_backup_postgres_20241118171941.dump from local storage
+2024-11-18 17:42:58 - INFO - Local delete result: True
+2024-11-18 17:51:41 - INFO - Starting perform_backup
+2024-11-18 17:51:41 - INFO - Database Action: backup_start
+2024-11-18 17:52:03 - INFO - local storage save succeeded for /Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118175141.dump
+2024-11-18 17:52:03 - INFO - cloud storage upload succeeded for None
+2024-11-18 17:52:03 - INFO - Completed perform_backup successfully
+2024-11-18 17:52:03 - CRITICAL - Backup failed: No result returned: Backup failed: No result returned
+2024-11-18 17:52:03 - CRITICAL - Stack trace: NoneType: None
+
+2024-11-18 17:54:59 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 17:54:59 - INFO - Slack notifier initialized successfully
+2024-11-18 17:54:59 - INFO - Starting perform_backup
+2024-11-18 17:54:59 - INFO - Database Action: backup_start
+2024-11-18 17:55:16 - INFO - local storage save succeeded for /Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118175459.dump
+2024-11-18 17:55:16 - INFO - cloud storage upload succeeded for None
+2024-11-18 17:55:17 - INFO - Slack API response status code: 200
+2024-11-18 17:55:17 - INFO - Successfully sent Slack notification
+2024-11-18 17:55:17 - INFO - Completed perform_backup successfully
+2024-11-18 17:55:17 - CRITICAL - Backup failed: No result returned: Backup failed: No result returned
+2024-11-18 17:55:17 - CRITICAL - Stack trace: NoneType: None
+
+2024-11-18 18:00:41 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 18:00:41 - INFO - Slack notifier initialized successfully
+2024-11-18 18:00:41 - INFO - Starting perform_backup
+2024-11-18 18:00:41 - INFO - Database Action: backup_start
+2024-11-18 18:01:08 - INFO - cloud storage upload succeeded for backups/20241118_180108_supabase_backup_postgres_20241118180042.dump
+2024-11-18 18:01:09 - INFO - Slack API response status code: 200
+2024-11-18 18:01:09 - INFO - Successfully sent Slack notification
+2024-11-18 18:01:09 - INFO - Completed perform_backup successfully
+2024-11-18 18:45:28 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 18:45:28 - INFO - Slack notifier initialized successfully
+2024-11-18 18:45:28 - INFO - Starting perform_backup
+2024-11-18 18:45:28 - INFO - Database Action: backup_start
+2024-11-18 18:45:48 - INFO - local storage save succeeded for /Users/tasha/Dev/backup_utility/output/supabase_backup_postgres_20241118184529.dump
+2024-11-18 18:45:48 - INFO - cloud storage upload succeeded for None
+2024-11-18 18:45:48 - INFO - Slack API response status code: 200
+2024-11-18 18:45:48 - INFO - Successfully sent Slack notification
+2024-11-18 18:45:48 - INFO - Completed perform_backup successfully
+2024-11-18 18:45:48 - CRITICAL - Backup failed: No result returned: Backup failed: No result returned
+2024-11-18 18:45:48 - CRITICAL - Stack trace: NoneType: None
+
+2024-11-18 19:01:27 - INFO - Successfully loaded config from config.json
+2024-11-18 19:01:28 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 19:01:28 - INFO - Slack notifier initialized successfully
+2024-11-18 19:01:28 - INFO - Initialized SlackNotifier with webhook URL: https://hooks.slack.com/services/T0...
+2024-11-18 19:01:28 - INFO - Slack notifier initialized successfully
+2024-11-18 19:01:28 - INFO - Starting scheduled backup...
+2024-11-18 19:01:28 - INFO - Starting perform_backup
+2024-11-18 19:01:28 - INFO - Database Action: backup_start
+2024-11-18 19:01:48 - INFO - cloud storage upload succeeded for backups/20241118_190148_supabase_backup_postgres_20241118190129.dump.gz
+2024-11-18 19:01:49 - INFO - Slack API response status code: 200
+2024-11-18 19:01:49 - INFO - Successfully sent Slack notification
+2024-11-18 19:01:49 - INFO - Completed perform_backup successfully
+2024-11-18 19:01:49 - INFO - Backup completed successfully: backups/20241118_190148_supabase_backup_postgres_20241118190129.dump.gz
+2024-11-18 19:01:49 - INFO - Slack API response status code: 200
+2024-11-18 19:01:49 - INFO - Successfully sent Slack notification
